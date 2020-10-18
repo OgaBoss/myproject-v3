@@ -23,6 +23,7 @@ type User struct {
 	gorm.Model
 	Name  string `gorm:"type:char(100)"`
 	Email string `gorm:"type:char(100);unique_index"`
+	Password string `gorm:"type:char(100)"`
 }
 
 // You may need to test features interacting with your database.
