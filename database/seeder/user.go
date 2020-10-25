@@ -12,12 +12,12 @@ import (
 //
 // Each seeder should have its own file.
 // A seeder's responsibilities are limited to a single table or model.
-// For example, the "seeder.User" should only seed the "users" table.
+// For example, the "seeder.user" should only seed the "users" table.
 // Moreover, seeders should have the same name as the model they are using.
 //
 // Learn more here: https://system-glitch.github.io/goyave/guide/advanced/testing.html#seeders
 
-// User seeder for users. Generate and save 10 users in the database.
+// user seeder for users. Generate and save 10 users in the database.
 func User() {
 	database.NewFactory(model.UserGenerator).Save(10)
 

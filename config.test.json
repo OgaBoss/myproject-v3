@@ -10,8 +10,8 @@
         "maintenance": false,
         "protocol": "http",
         "domain": "",
-        "port": 8080,
-        "httpsPort": 8081,
+        "port": 3000,
+        "httpsPort": 3001,
         "timeout": 10,
         "maxUploadSize": 10,
         "tls": {
