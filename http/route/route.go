@@ -2,6 +2,7 @@ package route
 
 import (
 	"github.com/OgaBoss/myproject-v3/http/controller/hello"
+	"github.com/OgaBoss/myproject-v3/http/controller/user"
 
 	"github.com/System-Glitch/goyave/v3"
 	"github.com/System-Glitch/goyave/v3/cors"
@@ -29,4 +30,6 @@ func Register(router *goyave.Router) {
 
 	// Route with validation
 	router.Post("/echo", hello.Echo).Validate(hello.EchoRequest)
+
+	router.Get("/users", user.Index)
 }

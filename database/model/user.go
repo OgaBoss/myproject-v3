@@ -18,11 +18,12 @@ func init() {
 	database.RegisterModel(&User{})
 }
 
-// User represents a user.
+// user represents a user.
 type User struct {
 	gorm.Model
 	Name  string `gorm:"type:char(100)"`
 	Email string `gorm:"type:char(100);unique_index"`
+	Password string `gorm:"type:char(100)"`
 }
 
 // You may need to test features interacting with your database.
@@ -33,7 +34,7 @@ type User struct {
 //
 // Learn more here: https://system-glitch.github.io/goyave/guide/advanced/testing.html#database-testing
 
-// UserGenerator generator function for the User model.
+// UserGenerator generator function for the user model.
 // Generate users using the following:
 //  database.NewFactory(model.UserGenerator).Generate(5)
 func UserGenerator() interface{} {
